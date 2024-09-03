@@ -15,8 +15,8 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 int	main()
 {
 	char *str1 = "ABC";
-	char *str2 = "AB";
+	char *str2 = "ABC";
 
-	printf("%i\n", strncmp(str1, str2,1));
-	printf("%i\n", ft_strncmp(str1, str2,1));
+	printf("using strncmp: %i\n", strncmp(str1, str2,4));
+	printf("using ft_strncmp: %i\n", ft_strncmp(str1, str2,4));
 }*/
