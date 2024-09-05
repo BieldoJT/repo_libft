@@ -5,6 +5,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <bsd/string.h>
+#include <stdlib.h>
 
 int ft_strlen(const char *);
 

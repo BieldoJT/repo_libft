@@ -26,7 +26,7 @@ mandatory
     • memchr
     • memcmp
  📖*✅ strnstr
- 📖* atoi
+ 📖*✅ atoi
     uses malloc:
       • calloc
       • strdup
