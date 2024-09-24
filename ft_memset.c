@@ -1,28 +1,40 @@
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+/*void    *ft_memset(void *src, int c, size_t n)
 {
-    size_t i;
-    unsigned char *tmp_s;
+    size_t  i;
+    unsigned char   *tmp_src;
 
+    tmp_src = (unsigned char *) src;
     i = 0;
-    tmp_s = (unsigned char *) s;
     while (i < n)
     {
-        tmp_s[i] = (unsigned char) c;
+        tmp_src[i] = (unsigned char) c;
         i++;
     }
-    return s;
+    return (src);
+}*/
+
+void    *ft_memset(void *src, int c, size_t n)
+{
+    unsigned char   *tmp_src;
+
+    tmp_src = (unsigned char *) src;
+    while (n--)
+        *tmp_src++ = c;
+    return (src);
 }
-/*
+
 int main(void)
 {
-    char buffer[50];
-    char *string;
-    string = (char *) ft_memset(buffer,'A', 10);
-    
-    printf("\nBuffer contents: %s\n", string);
+    char str1[15] = "hello world";
+    char str2[15] = "hello world";
 
-    ft_memset(buffer+10, 'B', 10);
-    printf("\nBuffer contents: %s\n", buffer);
-}*/
+    printf("\n String before: %s\n", str1);
+    memset(str1, 'B', 3);
+    ft_memset(str2, 'B', 3);
+
+
+    printf("\nUsing memset: %s\n", str1);
+    printf("\nUsing ft_memset: %s\n", str2);
+}
