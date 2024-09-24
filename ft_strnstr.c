@@ -23,7 +23,7 @@ char *ft_strnstr(char *str, char *to_find, size_t len)
 	return (0);
 }
 
-/*
+
 int main()
 {
     char *str = "aeiou";
@@ -33,4 +33,4 @@ int main()
     printf(" testing with ft_strnstr: %s\n", ft_strnstr(str,find,2));
 
     return 0;
-}*/
+}

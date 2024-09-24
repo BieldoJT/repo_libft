@@ -14,7 +14,7 @@ mandatory
  📖*✅ strlen                   • ft_strmapi
  📖*✅ memset                   • ft_striteri
  📖*✅ bzero (duvida)           • ft_putchar_fd
-    ✅ memcpy (duvida)          • ft_putstr_fd
+ 📖*✅ memcpy (duvida)          • ft_putstr_fd
     • memmove                  • ft_putendl_fd
  📖*✅ strlcpy                  • ft_putnbr_fd
  📖*✅ strlcat
@@ -23,8 +23,8 @@ mandatory
  📖*✅ strchr
  📖*✅ strrchr
  📖*✅ strncmp
-    • memchr
-    • memcmp
+ 📖*✅memchr
+ 📖*✅ memcmp
  📖*✅ strnstr
  📖*✅ atoi
     uses malloc:
