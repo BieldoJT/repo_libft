@@ -13,6 +13,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if(char_dest > char_src && char_dest > char_src + n) //comparação do ESPAÇO DE MEMORIAAAAAAA,
 	{
 		// usar um array auxiliar??
+		// ver se é possivel utilizar a aritmetica de endereços de memoria
 		i = n - 1;
 		while(i <= 0)
 		{
