@@ -8,7 +8,9 @@
 #include <bsd/string.h>
 #include <stdlib.h>
 
-int ft_strlen(const char *);
+int	ft_strlen(const char *);
+void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 
 #endif
