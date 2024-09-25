@@ -1,27 +1,25 @@
 #include "libft.h"
-/* se (a * b)/b != a , então deu overflow*/
+/* if (a * b)/b != a , then */
 
 void	*ft_calloc(size_t nelem, size_t elsize)
 {
 	void	*ptr;
 
-	if((nelem == 0) || (elsize == 0) || (nelem * elsize/elsize != nelem))
+	if((nelem == 0) || (elsize == 0) || ((nelem * elsize)/elsize != nelem))
 		ptr = NULL;
 	else
 	{
-		ptr = malloc(nelem * elsize);
+		ptr = (char *)malloc(nelem * elsize);
 		if(ptr != NULL)
 			ft_bzero(ptr, nelem * elsize);
-		else
-			ptr = NULL;
 	}
-	return (ptr);
+	return ((void *)ptr);
 }
 
 /*
 int main()
 {
-	char *ptr = ft_calloc(10, sizeof(char));
+	char *ptr = ft_calloc(LONG_MAX,2);
     if (ptr == NULL)
         printf("calloc failed\n");
     else
@@ -29,3 +27,4 @@ int main()
     free(ptr);
     return (0);
 }*/
+

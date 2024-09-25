@@ -14,7 +14,7 @@ int ft_strlcat(char *dst, const char *src, size_t size)
     dst_size = i;
     while (src[src_size])
         src_size++;
-    while (src[j] && i < size)
+    while (src[j] && i < (size - 1))
     {
         dst[i] = src[j];
         i++;
@@ -23,14 +23,19 @@ int ft_strlcat(char *dst, const char *src, size_t size)
     dst[i] = '\0';
     return (dst_size + src_size - 2);
 }
+
 /*
 int main(void)
 {
     char dst[20] =  "This";
     const char *src = " is a test";
-    
-
-    printf("using strlcat: %li\n", strlcat(dst,src,7));
-    printf("using ft_strlcat: %i\n", ft_strlcat(dst,src,7));
+	char dst2[20] =  "This";
+    const char *src2 = " is a test";
+	strlcat(dst,src,7);
+	ft_strlcat(dst2,src2,7);
+	printf("%s\n", dst);
+	printf("%s\n", dst2);
+    //printf("using strlcat: %li\n", strlcat(dst,src,7));
+    //printf("using ft_strlcat: %i\n", ft_strlcat(dst,src,7));
 }
 */

@@ -15,14 +15,14 @@
     return (src);
 }*/
 
-void    *ft_memset(void *src, int c, size_t n)
+void    *ft_memset(void *s, int c, size_t n)
 {
     unsigned char   *tmp_src;
 
-    tmp_src = (unsigned char *) src;
+    tmp_src = (unsigned char *) s;
     while (n--)
         *tmp_src++ = c;
-    return (src);
+    return (s);
 }
 
 /*

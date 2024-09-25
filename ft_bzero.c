@@ -4,17 +4,16 @@ void ft_bzero(void *s, size_t n)
 {
     size_t i;
     unsigned char *tmp_s;
-    unsigned char null;
 
     i = 0;
-    null = 0;
     tmp_s = (unsigned char *) s;
     while (i < n)
     {
-        tmp_s[i] = null;
+        tmp_s[i] = 0;
         i++;
     }
 }
+
 /*
 int main(void)
 {
@@ -23,8 +22,8 @@ int main(void)
 
     bzero(s,2);
     ft_bzero(t,2);
-    
-    printf("Buffer contents: %s\n",s);
-    printf("Buffer contents: %s\n",t);
+
+    printf("Buffer contents in s[2]: %c\n",s[2]);
+    printf("Buffer contents t[2]: %c\n",t[2]);
 
 }*/
