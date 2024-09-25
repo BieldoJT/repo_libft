@@ -11,11 +11,11 @@ int ft_isalnum(int c)
         return (0);
 }
 
-
+/*
 int main(void)
 {
     char test = '&';
 
     printf("testing with isalnum %d\n", isalnum(test));
     printf("testing with isalnum %d\n", ft_isalnum(test));
-}
+}*/

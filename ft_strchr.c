@@ -28,10 +28,11 @@ char *ft_strchr(const char *s, int c)
     if (c == 0)
         return (char *)s;
     return (0);
-
 }
+
+/*
 int main(void)
 {
     printf("using strchr: %s\n", strchr("I am optimus prime", 'r'));
     printf("using ft_strchr: %s\n", ft_strchr("I am optimus prime", 'r'));
-}
+}*/

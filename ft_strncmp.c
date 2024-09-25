@@ -14,6 +14,7 @@ int	ft_strncmp(char *s1, char *s2, size_t n)
 	return (s1[i] - s2[i]);
 }
 
+/*
 int	main()
 {
 	char *str1 = "ABC";
@@ -21,4 +22,4 @@ int	main()
 
 	printf("using strncmp: %i\n", strncmp(str1, str2,0));
 	printf("using ft_strncmp: %i\n", ft_strncmp(str1, str2,0));
-}
+}*/

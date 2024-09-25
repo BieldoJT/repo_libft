@@ -6,7 +6,7 @@ int ft_isdigit(int c)
     else
         return (0);
 }
-
+/*
 #include <stdio.h>
 #include <ctype.h>
 int main(void)
@@ -14,5 +14,5 @@ int main(void)
     char test = 'a';
     printf("result isdigit: %d\n", isdigit(test));
     printf("result isdigit: %d\n", ft_isdigit(test));
-}
+}*/
 

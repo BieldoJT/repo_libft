@@ -25,6 +25,7 @@ void    *ft_memset(void *src, int c, size_t n)
     return (src);
 }
 
+/*
 int main(void)
 {
     char str1[15] = "hello world";
@@ -37,4 +38,4 @@ int main(void)
 
     printf("\nUsing memset: %s\n", str1);
     printf("\nUsing ft_memset: %s\n", str2);
-}
+}*/

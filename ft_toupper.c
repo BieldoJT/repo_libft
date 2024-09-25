@@ -11,10 +11,11 @@ int ft_toupper(int c)
 
 }
 
+/*
 int main(void)
 {
     char c = '0';
 
     printf("using toupper: %d\n", toupper(c));
     printf("using ft_toupper: %d\n", ft_toupper(c));
-}
+}*/

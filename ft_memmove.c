@@ -24,6 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 }
 
+/*
 int main(void)
 {
 	char str_a[100] = "abcdefg";
@@ -39,6 +40,6 @@ int main(void)
     //t_memcpy(str2 + 8, str2, 10);
     printf("memmove overlap : %s\n ", str_a);
     //printf("ft_memcpy overlap : %s\n ", str_b);
-}
+}*/
 
 

@@ -18,6 +18,7 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 	return (ptr);
 }
 
+/*
 int main()
 {
 	char *ptr = ft_calloc(10, sizeof(char));
@@ -27,4 +28,4 @@ int main()
         printf("calloc success\n");
     free(ptr);
     return (0);
-}
+}*/

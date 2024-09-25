@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
     return (dest);
 }
 
-
+/*
 int main() {
     char str_a[100] = "Learningisfun";
     char str_b[100] = "Learningisfun";
@@ -31,4 +31,4 @@ int main() {
     ft_memcpy(str2 + 8, str2, 10);
     printf("memcpy overlap : %s\n ", str_a);
     printf("ft_memcpy overlap : %s\n ", str_b);
-}
+}*/

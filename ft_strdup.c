@@ -13,6 +13,7 @@ char	*strdup(const char *s)
     return (ptr);
 }
 
+/*
 int main()
 {
 	char *s = "Hello World";
@@ -21,4 +22,4 @@ int main()
     printf("copied string : %s\n", copy);
     free(copy);
     return (0);
-}
+}*/

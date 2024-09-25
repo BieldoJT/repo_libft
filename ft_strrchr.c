@@ -13,6 +13,7 @@ char *ft_strrchr(const char *s, int c)
     }
     return (0);
 }
+
 /*
 int main(void)
 {

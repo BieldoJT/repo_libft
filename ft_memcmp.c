@@ -18,6 +18,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
+
+/*
 int main()
 {
 	char *str1 = "Hellu";
@@ -26,4 +28,4 @@ int main()
     printf("using memcmp: %i\n", memcmp(str1, str2, 6));
     printf("using ft_memcmp: %i\n", ft_memcmp(str1, str2, 6));
     return (0);
-}
+}*/

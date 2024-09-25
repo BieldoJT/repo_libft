@@ -7,7 +7,7 @@ int ft_isprint(int c)
         return (0);
 }
 
-
+/*
 #include <stdio.h>
 #include <ctype.h>
 int main(void)
@@ -16,4 +16,4 @@ int main(void)
     printf("testing with isprint(): %d\n",ft_isprint('\n'));
     printf("testing with isprint(): %d\n",ft_isprint('\t'));
     printf("testing with isprint(): %d\n",ft_isprint('6'));
-}
+}*/

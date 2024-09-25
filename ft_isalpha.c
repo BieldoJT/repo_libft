@@ -9,6 +9,7 @@ int ft_isalpha(int c)
         return (0);
 }
 
+/*
 #include <stdio.h>
 #include <ctype.h>
 int main(void)
@@ -17,4 +18,4 @@ int main(void)
 
     printf("result of isalpha: %d\n", isalpha(test));
     printf("result of ft_isalpha: %d\n", ft_isalpha(test));
-}
+}*/
