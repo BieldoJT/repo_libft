@@ -23,7 +23,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-
+/*
 int main(void)
 {
 
@@ -32,7 +32,7 @@ int main(void)
 	char str_a[12] = "";
     char str_b[12] = "";
 
-    printf("Original string src :%s %p\n", str, &str);
+	printf("Original string src :%s %p\n", str, &str);
 	printf("Original string src :%s %p\n\n", str_a, &str_a);
 
     memmove(str_a , str, 5);
@@ -40,6 +40,6 @@ int main(void)
 
     printf("memmove   string : %s %p\n", str_a, &str_a);
     printf("ft_memcpy string : %s %p\n", str_b, &str_b);
-}
+}*/
 
 
