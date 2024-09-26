@@ -10,8 +10,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	s = (const unsigned char *)src;
 	i = 0;
 
-	// fazer a verificação caso dest ou src seja 0
-	// retornar nulo nesse caso
+	if (!d || !s)
+		return NULL; // duvida, não sei se verifica se é null
 
 	while (i < n)
 	{
