@@ -1,5 +1,5 @@
 #include "libft.h"
-int ft_strlcpy(char *dst, const char *src, size_t len)
+size_t ft_strlcpy(char *dst, const char *src, size_t len)
 {
     size_t i;
     size_t j;
@@ -13,12 +13,12 @@ int ft_strlcpy(char *dst, const char *src, size_t len)
     }
     while(i < len)
     {
-        dst[i] = '\0';
+        dst[i] = '\0'; //duvida, completa os vazios ou não?
         i++;
     }
     while(src[j] != '\0')
         j++;
-    
+
     return (j);
 }
 /*

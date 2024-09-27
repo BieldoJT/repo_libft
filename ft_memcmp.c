@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+size_t	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char *p1;
 	const unsigned char *p2;
@@ -26,6 +26,6 @@ int main()
     char *str2 = "Hello";
 
     printf("using memcmp: %i\n", memcmp(str1, str2, 6));
-    printf("using ft_memcmp: %i\n", ft_memcmp(str1, str2, 6));
+    printf("using ft_memcmp: %zu\n", ft_memcmp(str1, str2, 6));
     return (0);
 }*/
