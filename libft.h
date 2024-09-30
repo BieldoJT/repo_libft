@@ -23,6 +23,11 @@ char	*ft_substr(char const *s, unsigned int start,size_t len);
 char	*ft_strdup(const char *s);
 char	*ft_strtrim(char const *s1, char const *set);
 char *ft_strrchr(const char *s, int c);
+char	*ft_strtrim(char const *s1, char const *set);
+
+char	*ft_itoa(int n);
+
+void	*ft_calloc(size_t nelem, size_t elsize);
 
 
 

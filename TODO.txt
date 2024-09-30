@@ -6,16 +6,16 @@ to do: (lembrar de tirar as bibliotecas do .h)
 📖 = missing norminette.
 mandatory
   part1                       part2
- 📖*✅ isalpha                  • ft_substr
- 📖*✅ isdigit                  • ft_strjoin
- 📖*✅ isalnum                  • ft_strtrim
- 📖*✅ isascii                  • ft_split
- 📖*✅ isprint                  • ft_itoa
+ 📖*✅ isalpha                  📖*✅ ft_substr
+ 📖*✅ isdigit                  📖*✅ ft_strjoin
+ 📖*✅ isalnum                  📖*✅ ft_strtrim
+ 📖*✅ isascii                  📖*✅ ft_split
+ 📖*✅ isprint                  📖*✅ ft_itoa
  📖*✅ strlen                   • ft_strmapi
  📖*✅ memset                   • ft_striteri
  📖*✅ bzero (duvida)           • ft_putchar_fd
  📖*✅ memcpy (duvida)          • ft_putstr_fd
-    • memmove                  • ft_putendl_fd
+ 📖*✅ memmove                  • ft_putendl_fd
  📖*✅ strlcpy                  • ft_putnbr_fd
  📖*✅ strlcat
  📖*✅ toupper
@@ -28,8 +28,8 @@ mandatory
  📖*✅ strnstr
  📖*✅ atoi
     uses malloc:
-      • calloc
-      • strdup
+ 📖*✅ calloc
+ 📖*✅ strdup
 
 bonus:
     • ft_lstnew

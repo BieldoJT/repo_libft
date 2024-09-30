@@ -2,10 +2,14 @@
 
 
 
-int main()
+
+int main(void)
 {
-	printf("using strrchr: %s\n", strrchr("I am optimus prime", '\0'));
-    printf("using ft_strrchr: %s\n", ft_strrchr("I am optimus prime", '\0'));
+	int n = 0;
+    char *str = ft_itoa(n);
+    printf("Integer: %d\n", n);
+    printf("String: %s\n", str);
+    free(str);
     return (0);
 }
 
