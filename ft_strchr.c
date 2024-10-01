@@ -1,6 +1,6 @@
 #include "libft.h"
 
-/*char *ft_strchr(const char *s, int c)
+char *ft_strchr(const char *s, int c)
 {
     int i;
 
@@ -8,15 +8,15 @@
 
     while(s[i])
     {
-        if(s[i] == c)
-            return ((char*)s + i);
+        if((unsigned char)s[i] == (unsigned char)c)
+            return ((char *)s + i);
         i++;
     }
     if (c == 0)
-        return ((char*)s + i);
+        return ((char *)s + i);
     return (0);
-}*/
-
+}
+/*
 char *ft_strchr(const char *s, int c)
 {
     while (*s)
@@ -28,7 +28,7 @@ char *ft_strchr(const char *s, int c)
     if (c == 0)
         return (char *)s;
     return (0);
-}
+}*/
 
 /*
 int main(void)
