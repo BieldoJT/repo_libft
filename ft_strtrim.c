@@ -25,8 +25,8 @@ char	*ft_strtrim(char const *s1, char const *set)
  /*
 int main()
 {
-	char *s = "Hello, World!";
-    char *set = "eeeoo!";
+	char *s = " ee Hello, World!  e";
+    char *set = "eeeoo !";
     char *result;
 
     result = ft_strtrim(s, set);
