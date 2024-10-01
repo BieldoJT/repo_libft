@@ -20,6 +20,6 @@ int	main()
 	char *str1 = "ABC";
 	char *str2 = "tBC";
 
-	printf("using strncmp: %i\n", strncmp(str1, str2,0));
+	printf("using strncmp: %i\n", strncmp("str1", str2,0));
 	printf("using ft_strncmp: %i\n", ft_strncmp(str1, str2,0));
 }*/

@@ -27,7 +27,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 	str[size1 + size2] = '\0';
 	return (str);
 }
-
+/*
 int main()
 {
 	char *str1 = "Hello";
@@ -39,3 +39,4 @@ int main()
     free(result);
     return (0);
 }
+*/

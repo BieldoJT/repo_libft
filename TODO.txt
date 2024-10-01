@@ -11,8 +11,8 @@ mandatory
  📖*✅ isalnum                  📖*✅ ft_strtrim
  📖*✅ isascii                  📖*✅ ft_split
  📖*✅ isprint                  📖*✅ ft_itoa
- 📖*✅ strlen                   • ft_strmapi
- 📖*✅ memset                   • ft_striteri
+ 📖*✅ strlen                   📖*✅ ft_strmapi
+ 📖*✅ memset                   📖*✅ ft_striteri
  📖*✅ bzero (duvida)           • ft_putchar_fd
  📖*✅ memcpy (duvida)          • ft_putstr_fd
  📖*✅ memmove                  • ft_putendl_fd
