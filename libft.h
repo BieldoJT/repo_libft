@@ -52,7 +52,7 @@ int ft_isdigit(int c);
 int ft_isprint(int c);
 char	**ft_split(char const *s, char c);
 char *ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strncmp(char *s1, char *s2, size_t n);
+int	ft_strncmp(char *s1, char *s2, size_t n);
 char *ft_strnstr(char *str, char *to_find, size_t len);
 
 
