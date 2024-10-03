@@ -36,6 +36,13 @@ static char	*copy_word(char const *s, size_t index, size_t len)
 	return (word);
 }
 
+static void	free_tab(char **tab, size_t count)
+{
+	while (count > 0)
+		free(tab[--count]);
+	free(tab);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
@@ -45,20 +52,21 @@ char	**ft_split(char const *s, char c)
 
 	str_index = 0;
 	tab_index = 0;
-	tab = (char **)malloc((sizeof(char *) * count_words(s, c)) + 8);
-	if (!tab)
+	if (!s || !(tab = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1))))
 		return (NULL);
-	while (str_index < ft_strlen(s))
+	while (s[str_index])
 	{
-		word_len = 0;
-		while (s[str_index] != c && s[str_index] != '\0')
-		{
-			word_len++;
+		while (s[str_index] == c && s[str_index])
 			str_index++;
+		word_len = 0;
+		while (s[str_index + word_len] != c && s[str_index + word_len])
+			word_len++;
+		if (word_len > 0)
+		{
+			if (!(tab[tab_index++] = copy_word(s, str_index, word_len)))
+				return (free_tab(tab, tab_index), NULL);
 		}
-		tab[tab_index] = copy_word(s, str_index - word_len, word_len);
-		tab_index++;
-		str_index++;
+		str_index += word_len;
 	}
 	tab[tab_index] = NULL;
 	return (tab);
