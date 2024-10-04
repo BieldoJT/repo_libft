@@ -11,18 +11,13 @@ static char sum_index_c(unsigned int i, char c)
 
 */
 
-#include <bsd/string.h>
-int main(void)
+int main()
 {
-    //char dst[20] =  "This";
-
-	char dst2[20] =  "This";
-    const char src2[] = " is a test";
-	//strlcat(dst,src,7);
-	ft_strlcat(dst2,src2,3);
-
-	printf("%s\n", dst2);
-    //printf("using strlcat: %li\n", strlcat(dst,src,7));
-    //printf("using ft_strlcat: %i\n", ft_strlcat(dst,src,7));
+	char *ptr = ft_calloc(__SIZE_MAX__,2);
+    if (ptr == NULL)
+        printf("calloc failed\n");
+    else
+        printf("calloc success\n");
+    free(ptr);
+    return (0);
 }
-

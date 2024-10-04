@@ -13,10 +13,10 @@ mandatory
  📖*✅ isprint                  📖*✅ ft_itoa
  📖*✅ strlen                   📖*✅ ft_strmapi
  📖*✅ memset                   📖*✅ ft_striteri
- 📖*✅ bzero (duvida)           • ft_putchar_fd
- 📖*✅ memcpy (duvida)          • ft_putstr_fd
- 📖*✅ memmove                  • ft_putendl_fd
- 📖*✅ strlcpy                  • ft_putnbr_fd
+ 📖*✅ bzero (duvida)           📖*✅ ft_putchar_fd
+ 📖*✅ memcpy (duvida)          📖*✅ ft_putstr_fd
+ 📖*✅ memmove                  📖*✅ ft_putendl_fd
+ 📖*✅ strlcpy                  📖*✅ ft_putnbr_fd
  📖*✅ strlcat
  📖*✅ toupper
  📖*✅ tolower
@@ -32,12 +32,12 @@ mandatory
  📖*✅ strdup
 
 bonus:
-    • ft_lstnew
-    • ft_lstadd_front
-    • ft_lstsize
-    • ft_lstlast
-    • ft_lstadd_back
-    • ft_lstdelone
+ 📖*✅ ft_lstnew
+ 📖*✅ ft_lstadd_front
+ 📖*✅ ft_lstsize
+ 📖*✅ ft_lstlast
+ 📖*✅ ft_lstadd_back
+	🛠️* ft_lstdelone
     • ft_lstclear
     • ft_lstiter
     • ft_lstmap
