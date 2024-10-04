@@ -54,6 +54,15 @@ char	**ft_split(char const *s, char c);
 char *ft_strjoin(char const *s1, char const *s2);
 int	ft_strncmp(char *s1, char *s2, size_t n);
 char *ft_strnstr(const char *str,const char *to_find, size_t len);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+
+typedef struct s_list
+{
+	void	*content;
+	struct s_list	*next;
+}	t_list;
+
 
 
 #endif

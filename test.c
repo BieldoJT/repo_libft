@@ -10,23 +10,19 @@ static char sum_index_c(unsigned int i, char c)
 
 
 */
-int main()
+
+#include <bsd/string.h>
+int main(void)
 {
-    char str[] = "Hello, world!";
-    char *result;
+    //char dst[20] =  "This";
 
-    result = ft_memchr(str, 'w', strlen(str));
-    if (result)
-        printf("Found 'w' at position: %ld\n", result - str);
-    else
-        printf("'w' not found in the first %lu characters\n", strlen(str));
+	char dst2[20] =  "This";
+    const char src2[] = " is a test";
+	//strlcat(dst,src,7);
+	ft_strlcat(dst2,src2,3);
 
-    result = ft_memchr(str, 'z', strlen(str));
-    if (result)
-        printf("Found 'z' at position: %ld\n", result - str);
-    else
-        printf("'z' not found in the first %lu characters\n", strlen(str));
-
-    return 0;
+	printf("%s\n", dst2);
+    //printf("using strlcat: %li\n", strlcat(dst,src,7));
+    //printf("using ft_strlcat: %i\n", ft_strlcat(dst,src,7));
 }
 

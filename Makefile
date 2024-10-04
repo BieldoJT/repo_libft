@@ -42,7 +42,7 @@ re: fclean all
 # Regra para compilar e executar o teste
 test: $(NAME) test.o
 	$(CC) -o test test.o -L. -lft
-	./test
+	./test -lbsd | cat -e
 
 # Regra para compilar o arquivo de teste
 test.o: test.c
