@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-
+//TENHO QUE CORRIGIR A FUNÇÃO PARA PARA PASSAR NA NORMINETTE
 static size_t	count_words(char const *s, char c)
 {
 	size_t	index;
