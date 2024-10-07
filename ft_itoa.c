@@ -12,10 +12,11 @@
 
 #include "libft.h"
 
-static int int_len(int n)
+static int	int_len(int n)
 {
-	int i = 0;
+	int	i;
 
+	i = 0;
 	if (n == -2147483648)
 		return (11);
 	if (n == 0)
@@ -36,29 +37,28 @@ static int int_len(int n)
 char	*ft_itoa(int n)
 {
 	char	*s;
-	int	len;
+	int		len;
 
 	if (n == -2147483648)
-		return (strdup("-2147483648"));
+		return (ft_strdup("-2147483648"));
 	len = int_len(n);
-	s = (char *)ft_calloc(1,(len + 1));
+	s = (char *)ft_calloc(1, (len + 1));
 	if (s == NULL)
 		return (NULL);
 	if (n < 0)
-    {
+	{
 		s[0] = '-';
 		n *= -1;
 	}
 	while (--len >= 0)
 	{
 		if (s[len] == '-')
-			break;
-		s[len] = n%10 + '0';
+			break ;
+		s[len] = n % 10 + '0';
 		n /= 10;
 	}
 	return (s);
 }
-
 
 /*
 int main(void)

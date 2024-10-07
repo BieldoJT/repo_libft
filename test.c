@@ -7,17 +7,17 @@ static char sum_index_c(unsigned int i, char c)
 {
 	return (c + i);
 }
-
-
 */
+
+
 
 int main()
 {
-	char *ptr = ft_calloc(__SIZE_MAX__,2);
-    if (ptr == NULL)
-        printf("calloc failed\n");
-    else
-        printf("calloc success\n");
-    free(ptr);
-    return (0);
+    char *big = "aeiou";
+    char *find = "o";
+
+    //printf(" testing with strnstr: %s\n", strnstr(big,find,2));
+    printf(" testing with ft_strnstr: %s\n", ft_strnstr(big,find,7));
+
+    return 0;
 }
