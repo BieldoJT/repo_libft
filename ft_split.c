@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void	ft_freeup(char **strs)
+static void	free_strs(char **strs)
 {
 	int	i;
 
@@ -25,8 +25,7 @@ static void	ft_freeup(char **strs)
 	free(strs);
 }
 
-
-static int	ft_wordcount(char *str, char c)
+static int	wordcount(char *str, char c)
 {
 	int	i;
 	int	word;
@@ -63,27 +62,23 @@ static void	ft_strcpy(char *word, char *str, char c, int j)
 	word[i] = '\0';
 }
 
-static char	*ft_stralloc(char *str, char c, int *pos)
+static char	*malloc_str(char *str, char c, int *pos)
 {
 	char	*word;
+	int		len;
 	int		j;
 
 	j = *pos;
-	word = NULL;
-	while (str[*pos] != '\0')
-	{
-		if (str[*pos] != c)
-		{
-			while (str[*pos] != '\0' && str[*pos] != c)
-				*pos += 1;
-			word = (char *)malloc(sizeof(char) * (*pos + 1));
-			if (word == NULL)
-				return (NULL);
-			break ;
-		}
+	len = 0;
+	while (str[*pos] != '\0' && str[*pos] == c)
 		*pos += 1;
-	}
+	while (str[*pos + len] != '\0' && str[*pos + len] != c)
+		len++;
+	word = (char *)malloc(sizeof(char) * (len + 1));
+	if (word == NULL)
+		return (NULL);
 	ft_strcpy(word, str, c, j);
+	*pos += len;
 	return (word);
 }
 
@@ -98,24 +93,23 @@ char	**ft_split(char const *str, char c)
 		return (NULL);
 	i = 0;
 	pos = 0;
-	j = ft_wordcount((char *)str, c);
+	j = wordcount((char *)str, c);
 	strs = (char **)malloc(sizeof(char *) * (j + 1));
 	if (strs == NULL)
 		return (NULL);
 	strs[j] = NULL;
 	while (i < j)
 	{
-		strs[i] = ft_stralloc(((char *)str), c, &pos);
+		strs[i] = malloc_str(((char *)str), c, &pos);
 		if (strs[i] == NULL)
 		{
-			ft_freeup(strs);
+			free_strs(strs);
 			break ;
 		}
 		i++;
 	}
 	return (strs);
 }
-
 
 /*
 int main()

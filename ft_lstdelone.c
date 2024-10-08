@@ -26,6 +26,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	aux = lst->next;
 	del(lst->content);
 	free(lst);
+	lst = aux;
 }
 /*
 //main to test the ft_lstdelone
