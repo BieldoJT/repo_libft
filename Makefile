@@ -22,15 +22,14 @@ BONUS_OBJS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar rcs $@ $(OBJS)
 
-bonus: $(BONUS_OBJS)
+bonus: $(BONUS_OBJS) $(NAME)
 	ar rcs $(NAME) $(BONUS_OBJS)
-
-.o: .c
-	$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
 
 clean:
 	rm -f $(OBJS)
