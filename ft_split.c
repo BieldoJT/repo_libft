@@ -12,76 +12,108 @@
 
 #include "libft.h"
 
-//TENHO QUE CORRIGIR A FUNÇÃO PARA PARA PASSAR NA NORMINETTE
-static size_t	count_words(char const *s, char c)
+static void	ft_freeup(char **strs)
 {
-	size_t	index;
-	size_t	words;
+	int	i;
 
-	index = 0;
-	words = 0;
-	while (s[index] != '\0')
+	i = 0;
+	while (strs[i] != NULL)
 	{
-		if (s[index] == c || s[index + 1] == '\0')
-			words++;
-		index++;
+		free(strs[i]);
+		i++;
 	}
-	return (words);
+	free(strs);
 }
 
-static char	*copy_word(char const *s, size_t index, size_t len)
-{
-	char	*word;
-	size_t	index_word;
 
-	word = (char *)malloc(sizeof(char) * (len + 1));
-	if (!word)
-		return (NULL);
-	index_word = 0;
-	while (index_word < len)
+static int	ft_wordcount(char *str, char c)
+{
+	int	i;
+	int	word;
+
+	i = 0;
+	word = 0;
+	while (str[i] != '\0')
 	{
-		word[index_word] = s[index];
-		index_word++;
-		index++;
+		if (str[i] != c)
+		{
+			word++;
+			while (str[i] != c && str[i] != '\0')
+				i++;
+			if (str[i] == '\0')
+				return (word);
+		}
+		i++;
 	}
-	word[index_word] = '\0';
 	return (word);
 }
 
-static void	free_tab(char **tab, size_t count)
+static void	ft_strcpy(char *word, char *str, char c, int j)
 {
-	while (count > 0)
-		free(tab[--count]);
-	free(tab);
+	int	i;
+
+	i = 0;
+	while (str[j] != '\0' && str[j] == c)
+		j++;
+	while (str[j + i] != c && str[j + i] != '\0')
+	{
+		word[i] = str[j + i];
+		i++;
+	}
+	word[i] = '\0';
 }
 
-char	**ft_split(char const *s, char c)
+static char	*ft_stralloc(char *str, char c, int *pos)
 {
-	char	**tab;
-	size_t	str_index;
-	size_t	word_len;
-	size_t	tab_index;
+	char	*word;
+	int		j;
 
-	str_index = 0;
-	tab_index = 0;
-	if (!s || !(tab = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1))))
-		return (NULL);
-	while (s[str_index])
+	j = *pos;
+	word = NULL;
+	while (str[*pos] != '\0')
 	{
-		while (s[str_index] == c && s[str_index])
-			str_index++;
-		word_len = 0;
-		while (s[str_index + word_len] != c && s[str_index + word_len])
-			word_len++;
-		if (word_len > 0)
+		if (str[*pos] != c)
 		{
-			if (!(tab[tab_index++] = copy_word(s, str_index, word_len)))
-				return (free_tab(tab, tab_index), NULL);
+			while (str[*pos] != '\0' && str[*pos] != c)
+				*pos += 1;
+			word = (char *)malloc(sizeof(char) * (*pos + 1));
+			if (word == NULL)
+				return (NULL);
+			break ;
 		}
-		str_index += word_len;
+		*pos += 1;
 	}
-	tab[tab_index] = NULL;
-	return (tab);
+	ft_strcpy(word, str, c, j);
+	return (word);
+}
+
+char	**ft_split(char const *str, char c)
+{
+	char	**strs;
+	int		i;
+	int		j;
+	int		pos;
+
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	pos = 0;
+	j = ft_wordcount((char *)str, c);
+	strs = (char **)malloc(sizeof(char *) * (j + 1));
+	if (strs == NULL)
+		return (NULL);
+	strs[j] = NULL;
+	while (i < j)
+	{
+		strs[i] = ft_stralloc(((char *)str), c, &pos);
+		if (strs[i] == NULL)
+		{
+			ft_freeup(strs);
+			break ;
+		}
+		i++;
+	}
+	return (strs);
 }
 
 
