@@ -16,15 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-/*
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-#include <strings.h>
-#include <bsd/string.h>
-#include <limits.h>
-*/
-
 int		ft_atoi(const char *nptr);
 size_t	ft_strlen(const char *s);
 void	ft_bzero(void *s, size_t n);
