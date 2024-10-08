@@ -22,11 +22,15 @@ static void	free_node(void *data)
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*aux;
+	t_list	*next;
 
 	aux = *lst;
-	while (aux->next != NULL)
+	while (aux != NULL)
 	{
-		del(aux);
-		aux = aux->next;
+		next = aux->next;
+		del(aux->content);
+		free(aux);
+		aux = next;
 	}
+	*lst = aux;
 }

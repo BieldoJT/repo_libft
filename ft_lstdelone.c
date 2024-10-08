@@ -21,7 +21,11 @@ static void	free_node(void *data)
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	t_list	*aux;
+
+	aux = lst->next;
 	del(lst->content);
+	free(lst);
 }
 /*
 //main to test the ft_lstdelone
