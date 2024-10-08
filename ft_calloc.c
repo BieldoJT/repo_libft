@@ -12,18 +12,18 @@
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nelem, size_t elsize)
+void	*ft_calloc(size_t nelem, size_t size)
 {
 	void	*ptr;
 	size_t	total_size;
 
-	if ((nelem == 0) || (elsize == 0))
+	if ((nelem == 0) || (size == 0))
 	{
 		ptr = ft_calloc(1, 1);
 		return (ptr);
 	}
-	total_size = nelem * elsize;
-	if ((total_size / nelem) != elsize)
+	total_size = nelem * size;
+	if ((total_size / nelem) != size)
 		return (NULL);
 	ptr = (char *)malloc(total_size);
 	if (ptr != NULL)
