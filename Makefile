@@ -22,8 +22,8 @@ BONUS_OBJS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+.c.o:
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 $(NAME): $(OBJS)
 	ar rcs $@ $(OBJS)
@@ -41,4 +41,4 @@ fclean: clean
 re: fclean all
 
 
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re
